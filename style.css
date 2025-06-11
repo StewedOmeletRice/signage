@@ -2,6 +2,19 @@ body {
     margin: 0;
     padding: 0;
 }
+.content {
+    width: 2520px;
+    height: 1080px;
+}
 .panel1 {
-    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+.panel1 {
+    background-color: #000000;
+    text-align: center;
+}
+#time {
+    font-size: 600px;
+    color: #ffffff;
 }
