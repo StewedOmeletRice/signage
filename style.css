@@ -55,6 +55,12 @@ body {
 .panel2 > .right > div > #weather > img {
     width: 300px;
 }
+.panel2 > .right > div > .temperature > #high {
+    color: #ff0000;
+}
+.panel2 > .right > div > .temperature > #low {
+    color: #4e90ff;
+}
 .panel2 > .right > div > span {
     font-size: 100px;
 }

@@ -13,14 +13,15 @@ function getWeatherData() {
 getWeatherData();
 
 var dateObject = new Date();
-var year = String(dateObject.getFullYear()).slice(-2);
-var month = lengthFix(dateObject.getMonth() + 1);
-var date = lengthFix(dateObject.getDate() + 1);
+var year = 0;
+var month = 0;
+var date = lengthFix(dateObject.getDate());
 var hours = lengthFix(dateObject.getHours());
 var minutes = lengthFix(dateObject.getMinutes());
-var dayObject = dateObject.getDay() + 1;
+var dayObject = 0;
+var day = 0;
+
 const dayArray = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-var day = dayArray[dayObject];
 
 var panels = 2;
 
@@ -59,19 +60,12 @@ const interval = setInterval(function() {
     dateObject = new Date();
     year = String(dateObject.getFullYear()).slice(-2);
     month = lengthFix(dateObject.getMonth() + 1);
-    date = lengthFix(dateObject.getDate() + 1);
+    date = lengthFix(dateObject.getDate());
     hours = lengthFix(dateObject.getHours());
     minutes = lengthFix(dateObject.getMinutes());
-    dayObject = dateObject.getDay() + 1;
+    dayObject = dateObject.getDay();
     day = dayArray[dayObject];
     if (dateOld != date) { getWeatherData(); }
-    /* function lengthFix(number) {
-        if (number < 10) {
-            return '0' + String(number);
-        } else {
-            return String(number);
-        }
-    } */
     time1HTML.innerHTML = String(hours) + ':' + String(minutes);
     time2lHTML.innerHTML = String(hours) + ':' + String(minutes);
     dateHTML.innerHTML = String(year) + '.' + String(month) + '.' + String(date) + ' (' + day + ')';
